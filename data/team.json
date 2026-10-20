@@ -1,0 +1,94 @@
+{
+  "members": [
+    {
+      "name": "Serk In Park, DDS, PhD",
+      "title": "Principal Investigator",
+      "photo": "assets/img/team/headshot.png",
+      "pi": true,
+      "orcid": "https://orcid.org/0000-0001-8643-5096",
+      "linkedin": "http://www.linkedin.com/in/serk-in-park-0a403322",
+      "profile": "https://medicine.korea.ac.kr/kr/professor/detail.do?profSn=203",
+      "hidden": false
+    },
+    {
+      "name": "A-Ram Kang, PhD",
+      "title": "Research Instructor",
+      "photo": "assets/img/team/KAR.png",
+      "pi": false,
+      "orcid": "",
+      "linkedin": "",
+      "profile": "",
+      "hidden": false
+    },
+    {
+      "name": "A Reum Han, M.D., Ph.D",
+      "title": "Postdoctoral Fellow",
+      "photo": "assets/img/team/HAR.png",
+      "pi": false,
+      "orcid": "",
+      "linkedin": "",
+      "profile": "",
+      "hidden": false
+    },
+    {
+      "name": "Bo Yeon Seo",
+      "title": "Ph.D. Student",
+      "photo": "assets/img/team/SBY.png",
+      "pi": false,
+      "orcid": "",
+      "linkedin": "",
+      "profile": "",
+      "hidden": false
+    },
+    {
+      "name": "Ji-Hye Kim",
+      "title": "MS Student, AImmuneLink",
+      "photo": "assets/img/team/KJH.png",
+      "pi": false,
+      "orcid": "",
+      "linkedin": "",
+      "profile": "",
+      "hidden": false
+    },
+    {
+      "name": "Mi Hyang Song",
+      "title": "MS Student",
+      "photo": "assets/img/team/SMH.png",
+      "pi": false,
+      "orcid": "",
+      "linkedin": "",
+      "profile": "",
+      "hidden": false
+    },
+    {
+      "name": "Ji Woo Shin",
+      "title": "MS Student, AImmuneLink",
+      "photo": "assets/img/team/SJW.png",
+      "pi": false,
+      "orcid": "",
+      "linkedin": "",
+      "profile": "",
+      "hidden": false
+    },
+    {
+      "name": "Bo Min Kim",
+      "title": "Ph.D. Student",
+      "photo": "assets/img/team/KBM.png",
+      "pi": false,
+      "orcid": "",
+      "linkedin": "",
+      "profile": "",
+      "hidden": false
+    },
+    {
+      "name": "Keun Hee Lee, M.S.",
+      "title": "Administrative Assistant",
+      "photo": "assets/img/team/LKH.png",
+      "pi": false,
+      "orcid": "",
+      "linkedin": "",
+      "profile": "",
+      "hidden": false
+    }
+  ]
+}

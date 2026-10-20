@@ -1,0 +1,235 @@
+/* Bone Lab at Korea University
+   Desktop layout reproduces the original Wix page (980px column) pixel for pixel.
+   Below 980px the same content reflows for tablets and phones. */
+
+:root {
+  --text: #000000;
+  --muted: rgb(89, 89, 89);
+  --accent: #0057E1;
+  --bg: #FFFFFF;
+  --header-h: 83px;
+  --font: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+img { display: block; border: 0; }
+a { color: inherit; }
+p, h1, h2, h3, ul, ol { margin: 0; }
+
+section, footer { scroll-margin-top: var(--header-h); }
+
+/* ---------- Header / menu ---------- */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-h);
+  background: var(--bg);
+}
+.menu {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.menu li { margin: 0; }
+.menu a {
+  display: block;
+  padding: 14px 18.5px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.menu a:hover,
+.menu a.active { color: var(--accent); }
+.menu-toggle { display: none; }
+
+/* ---------- Page column ---------- */
+.page { width: 980px; margin: 0 auto; }
+
+/* Rich text (Wix font_8 equivalents) */
+.rt18 { font-size: 18px; line-height: 25.2px; }
+.rt16 { font-size: 16px; line-height: 22.4px; }
+.rt ol { padding: 0; margin-left: 9px; }
+.rt ol li { margin-left: 23.4px; }
+.rt ul { padding: 0; margin-left: 8px; list-style: disc outside; }
+.rt ul li { margin-left: 20.8px; }
+
+.sec-title {
+  font-size: 38px;
+  line-height: 53.2px;
+  font-weight: 700;
+  text-align: center;
+  height: 53px;
+}
+
+/* ---------- Hero ---------- */
+.sec-hero { height: 670px; padding-top: 10px; }
+.hero {
+  width: 980px;
+  height: 649px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* ---------- About ---------- */
+.sec-about { min-height: 596px; padding-top: 20px; }
+.about-text .caption {
+  font-size: 15px;
+  line-height: 21px;
+  color: var(--muted);
+}
+
+/* ---------- Research ---------- */
+.sec-research { min-height: 503px; }
+.research-text { margin-top: 17px; }
+
+/* ---------- Publications ---------- */
+.sec-pubs { min-height: 717px; }
+.pubs-wrap { position: relative; }
+.pubs { width: 700px; margin-left: 45px; padding-top: 6px; }
+.pub2 { margin-top: 12px; }
+.pub3 { margin-top: 11px; }
+.pub4 { margin-top: 13px; }
+.pub .feature { margin-left: 40px; }
+.cover { position: absolute; left: 760px; width: 160px; height: 213px; object-fit: cover; }
+.cover1 { top: 6px; }
+.cover2 { top: 230px; }
+.pubmed-link {
+  width: 381px;
+  margin: 70px auto 0;
+  font-size: 22px;
+  line-height: 30.8px;
+  text-align: center;
+}
+.pubmed-link a { text-decoration: none; color: var(--text); }
+.nih-logo { display: block; width: 345px; margin: 11px 0 0 317px; }
+.nih-logo img { width: 345px; height: 38px; }
+
+/* ---------- Team (rendered from data/team.json) ---------- */
+.sec-team { min-height: 646px; padding-bottom: 108px; }
+.member { display: flex; align-items: flex-start; }
+.member .photo { width: 105px; height: 105px; flex: 0 0 105px; object-fit: cover; }
+.member .info { font-size: 16px; line-height: 22.4px; }
+.member .links { display: flex; align-items: flex-start; gap: 11px; margin-top: 10px; }
+.member .links a { display: block; }
+.member .links img.orcid,
+.member .links img.linkedin { width: 40px; height: 40px; }
+.member .links img.ku { width: 45px; height: 51px; margin-top: -2px; margin-left: -4px; }
+
+.team-pi { margin-top: 19px; }
+.team-pi .member { margin-left: 345px; margin-bottom: 25px; }
+.team-pi .member .info { margin-left: -6px; }
+.team-pi .member .links { margin-left: 17px; }
+.team-pi:empty { margin: 0; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 320px 315px 321px;
+  row-gap: 11px;
+  padding-left: 24px;
+}
+.team-grid .member:nth-child(3n+2) .info { margin-left: -5px; }
+
+/* ---------- Translation ---------- */
+.sec-translation { min-height: 557px; }
+.translation-text { margin-top: 13px; }
+.tagline {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--accent);
+}
+.aimmunelink { width: 367px; height: 76px; margin: 8px 0 0 306px; object-fit: contain; }
+
+/* ---------- Footer ---------- */
+.site-footer { min-height: 166px; }
+.footer-text {
+  width: 950px;
+  margin: 0 auto;
+  padding: 10px 0 0 4px;
+  text-align: center;
+  color: var(--muted);
+}
+.footer-text .f16 { font-size: 16px; line-height: 22.4px; }
+.footer-text .f14 { font-size: 14px; line-height: 19.6px; }
+
+/* ================= Tablet and phone ================= */
+@media (max-width: 979px) {
+  :root { --header-h: 60px; }
+
+  .menu { width: 100%; justify-content: flex-end; padding: 0 12px; position: relative; }
+  .menu-toggle {
+    display: flex; flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px; padding: 10px; background: none; border: 0; cursor: pointer;
+  }
+  .menu-toggle span { display: block; height: 2px; background: var(--text); }
+  .menu ul {
+    display: none;
+    position: absolute; top: var(--header-h); left: 0; right: 0;
+    flex-direction: column; background: var(--bg);
+    border-bottom: 1px solid #e5e5e5; padding: 8px 0;
+  }
+  .menu.open ul { display: flex; }
+  .menu a { padding: 12px 20px; text-align: center; }
+
+  .page { width: 100%; }
+  .sec-hero, .sec-about, .sec-research, .sec-pubs, .sec-team, .sec-translation, .site-footer {
+    height: auto; min-height: 0;
+  }
+  .sec-hero { padding: 0; }
+  .hero { width: 100%; height: auto; aspect-ratio: 980 / 649; }
+
+  section { padding: 0 16px 56px; }
+  .sec-hero { padding-bottom: 32px; }
+  .sec-about { padding-top: 0; }
+  .sec-title { font-size: 30px; line-height: 42px; height: auto; margin-bottom: 16px; }
+
+  .rt18 { font-size: 16px; line-height: 23px; }
+
+  .pubs { width: auto; margin: 0; padding: 0; }
+  .pub + .pub { margin-top: 12px; }
+  .pub .feature { margin-left: 28px; }
+  .cover { position: static; display: inline-block; margin: 20px 12px 0 0; width: 120px; height: auto; }
+  .pubmed-link { width: auto; margin-top: 32px; font-size: 19px; }
+  .nih-logo { margin: 10px auto 0; max-width: 100%; }
+  .nih-logo img { width: 100%; height: auto; }
+
+  .sec-team { padding-bottom: 56px; }
+  .team-pi { margin-top: 0; }
+  .team-pi .member { margin: 0 0 24px; justify-content: center; }
+  .team-pi .member .info, .team-grid .member:nth-child(3n+2) .info { margin-left: 0; }
+  .team-pi .member .links { margin-left: 0; }
+  .member .info { padding-left: 12px; }
+  .team-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; padding: 0; }
+
+  .tagline { font-size: 21px; line-height: 30px; }
+  .aimmunelink { margin: 24px auto 0; max-width: 100%; height: auto; }
+
+  .site-footer { padding: 24px 16px 32px; }
+  .footer-text { width: auto; padding: 0; }
+}

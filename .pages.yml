@@ -1,0 +1,49 @@
+# Pages CMS configuration (https://pagescms.org)
+# 연구원 목록만 CMS로 편집합니다. 나머지 페이지는 index.html 그대로 유지됩니다.
+
+media:
+  input: assets/img/team
+  output: assets/img/team
+
+content:
+  - name: team
+    label: 연구원 목록 (Team)
+    type: file
+    path: data/team.json
+    format: json
+    fields:
+      - name: members
+        label: 연구원
+        type: object
+        list: true
+        description: 위에서 아래 순서대로 홈페이지에 표시됩니다 (끌어서 순서 변경). 3명씩 한 줄로 배치됩니다.
+        fields:
+          - name: name
+            label: 이름 (Name)
+            type: string
+            required: true
+          - name: title
+            label: 직함 (Title)
+            type: string
+            description: 예) Ph.D. Student, MS Student, Postdoctoral Fellow
+          - name: photo
+            label: 사진 (Photo)
+            type: image
+            description: 정사각형 이미지 권장 (420 x 420 px 이상). 정사각형이 아니면 가운데가 잘려 보입니다.
+          - name: pi
+            label: 책임연구자(PI) 줄에 표시
+            type: boolean
+            default: false
+          - name: orcid
+            label: ORCID 링크
+            type: string
+          - name: linkedin
+            label: LinkedIn 링크
+            type: string
+          - name: profile
+            label: 고려대 의대 교수 프로필 링크
+            type: string
+          - name: hidden
+            label: 숨기기 (졸업 등으로 잠시 내릴 때)
+            type: boolean
+            default: false
