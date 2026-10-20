@@ -87,9 +87,9 @@ section, footer { scroll-margin-top: var(--header-h); }
 }
 
 /* ---------- Hero ---------- */
-.sec-hero { height: 670px; padding-top: 10px; }
+.sec-hero { height: 670px; padding-top: 10px; min-width: 980px; }
 .hero {
-  width: 980px;
+  width: 100%;
   height: 649px;
   object-fit: cover;
   object-position: 50% 50%;
@@ -201,7 +201,7 @@ section, footer { scroll-margin-top: var(--header-h); }
   .sec-hero, .sec-about, .sec-research, .sec-pubs, .sec-team, .sec-translation, .site-footer {
     height: auto; min-height: 0;
   }
-  .sec-hero { padding: 0; }
+  .sec-hero { padding: 0; min-width: 0; }
   .hero { width: 100%; height: auto; aspect-ratio: 980 / 649; }
 
   section { padding: 0 16px 56px; }
