@@ -6,6 +6,7 @@
   --text: #000000;
   --muted: rgb(89, 89, 89);
   --accent: #0057E1;
+  --ku-crimson: #8B0029;
   --bg: #FFFFFF;
   --header-h: 83px;
   --font: Helvetica, "Helvetica Neue", Arial, sans-serif;
@@ -195,7 +196,7 @@ section, footer { scroll-margin-top: var(--header-h); }
     line-height: 20px;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: var(--text);
+    color: var(--ku-crimson);
     text-decoration: none;
     white-space: nowrap;
   }
