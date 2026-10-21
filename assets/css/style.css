@@ -66,6 +66,7 @@ section, footer { scroll-margin-top: var(--header-h); }
 .menu a:hover,
 .menu a.active { color: var(--accent); }
 .menu-toggle { display: none; }
+.brand { display: none; }
 
 /* ---------- Page column ---------- */
 .page { width: 980px; margin: 0 auto; }
@@ -117,7 +118,7 @@ section, footer { scroll-margin-top: var(--header-h); }
 .pub .feature { margin-left: 40px; }
 .cover { position: absolute; left: 760px; width: 160px; height: 213px; object-fit: cover; }
 .cover1 { top: 6px; }
-.cover2 { top: 230px; }
+.cover2 { top: 230px; border: 1px solid #d0d0d0; }
 .pubmed-link {
   width: 381px;
   margin: 70px auto 0;
@@ -182,7 +183,23 @@ section, footer { scroll-margin-top: var(--header-h); }
 @media (max-width: 979px) {
   :root { --header-h: 60px; }
 
-  .menu { width: 100%; justify-content: flex-end; padding: 0 12px; position: relative; }
+  #site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(4px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px));
+  }
+  .brand {
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .menu { width: auto; margin: 0; justify-content: flex-end; padding: 0; position: static; }
   .menu-toggle {
     display: flex; flex-direction: column; justify-content: center; gap: 5px;
     width: 44px; height: 44px; padding: 10px; background: none; border: 0; cursor: pointer;
@@ -214,7 +231,9 @@ section, footer { scroll-margin-top: var(--header-h); }
   .pubs { width: auto; margin: 0; padding: 0; }
   .pub + .pub { margin-top: 12px; }
   .pub .feature { margin-left: 28px; }
-  .cover { position: static; display: inline-block; margin: 20px 12px 0 0; width: 120px; height: auto; }
+  .pubs-wrap { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 16px; row-gap: 24px; }
+  .pubs { flex: 0 0 100%; }
+  .cover { position: static; margin: 0; width: 120px; height: auto; }
   .pubmed-link { width: auto; margin-top: 32px; font-size: 19px; }
   .nih-logo { margin: 10px auto 0; max-width: 100%; }
   .nih-logo img { width: 100%; height: auto; }
